@@ -54,9 +54,12 @@ public class Calculadora {
 	
 	public boolean esPrimo(int a) {
 		boolean primo = false;
-		int raiz = (int)Math.sqrt(a);
-		for (int i = 2; i <= raiz && !primo; i++) {
-			primo = a % i == 0;
+		if (a > 0) {
+			
+			int raiz = (int)Math.sqrt(a);
+			for (int i = 2; i <= raiz && !primo; i++) {
+				primo = a % i == 0;
+			}
 		}
 		return primo;
 	}
