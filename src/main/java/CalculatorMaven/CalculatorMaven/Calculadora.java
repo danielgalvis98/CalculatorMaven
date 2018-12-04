@@ -12,7 +12,7 @@ public class Calculadora {
 		estadoFuncionalidad[4] = false;
 		estadoFuncionalidad[5] = false;
 		estadoFuncionalidad[6] = false;
-		estadoFuncionalidad[7] = false;
+		estadoFuncionalidad[7] = true;
 		estadoFuncionalidad[8] = false;
 		estadoFuncionalidad[9] = false;		
 	}
@@ -53,8 +53,12 @@ public class Calculadora {
 	}
 	
 	public boolean esPrimo(int a) {
-		//TODO desarrollar funcionalidad
-		return false;
+		boolean primo = false;
+		int raiz = (int)Math.sqrt(a);
+		for (int i = 2; i <= raiz && !primo; i++) {
+			primo = a % i == 0;
+		}
+		return primo;
 	}
 	
 	public boolean esPar(int a) {
